@@ -221,6 +221,209 @@ const products = [
         category: "Industrial",
         description: "Long continuous roll of polycarbonate for large seamless installations.",
         image: "/products/polycarbonate-sheet-roll-1000x1000.webp",
+    },
+    {
+        id: "new-added-0",
+        title: "Premium Polycarbonate Sheet 1",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/11.jpeg",
+    },
+    {
+        id: "new-added-1",
+        title: "Premium Polycarbonate Sheet 2",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/3-1.jpeg",
+    },
+    {
+        id: "new-added-2",
+        title: "Architectural Sheet 3",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/31a1b4d5503c77eb741d045ded593e7d.jpg",
+    },
+    {
+        id: "new-added-3",
+        title: "Architectural Sheet 4",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/428bdb45910668949cd3fefdcafb23cb---copy.jpg",
+    },
+    {
+        id: "new-added-4",
+        title: "Architectural Sheet 5",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/5f4417059d613aa516967c57abac24c2---copy.jpg",
+    },
+    {
+        id: "new-added-5",
+        title: "Architectural Sheet 6",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/a080b1f1808cac32f23a186dc06f9c20.jpg",
+    },
+    {
+        id: "new-added-6",
+        title: "Architectural Sheet 7",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/a62b80cd0da584ad4e5f715dbade77ad.jpg",
+    },
+    {
+        id: "new-added-7",
+        title: "Architectural Sheet 8",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/b9ed1bfd327bc45bdfed0e795f195ffa.jpg",
+    },
+    {
+        id: "new-added-8",
+        title: "Architectural Sheet 9",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/bb7d8eb4dd6abc83d5889c33b3a0adef.jpg",
+    },
+    {
+        id: "new-added-9",
+        title: "Architectural Sheet 10",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/c1d26bafef07392cd3e2db58d17bae2f.jpg",
+    },
+    {
+        id: "new-added-10",
+        title: "Architectural Sheet 11",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/dd29bc15d5cac00c107587c9bd33bbe1.jpg",
+    },
+    {
+        id: "new-added-11",
+        title: "Architectural Sheet 12",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/e41300cd3e2734c410d6b108d4cda2f3.jpg",
+    },
+    {
+        id: "new-added-12",
+        title: "Architectural Sheet 13",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/eae58a79557c695d94b5f5637eb78be0.jpg",
+    },
+    {
+        id: "new-added-13",
+        title: "Architectural Sheet 14",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/f07b99897b1663208fb296b681eccb54.jpg",
+    },
+    {
+        id: "new-added-14",
+        title: "Architectural Sheet 15",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/f4630cb16bcc38efac0bea1e52a49fd2.jpg",
+    },
+    {
+        id: "new-added-15",
+        title: "Architectural Sheet 16",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/f6916413059951ecf6f6b8b8ad1fa544.jpg",
+    },
+    {
+        id: "new-added-16",
+        title: "Architectural Sheet 17",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/f87dcd58dc41e18d74a18bc4be0c5c02.jpg",
+    },
+    {
+        id: "new-added-17",
+        title: "Premium Polycarbonate Sheet 18",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/what-image-2026-01-01-at-12.08.51-pm.jpeg",
+    },
+    {
+        id: "new-added-18",
+        title: "Site Installation View 19",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12..jpeg",
+    },
+    {
+        id: "new-added-19",
+        title: "Site Installation View 20",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08..jpeg",
+    },
+    {
+        id: "new-added-20",
+        title: "Site Installation View 21",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.5.jpeg",
+    },
+    {
+        id: "new-added-21",
+        title: "Site Installation View 22",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.50-pm.jpeg",
+    },
+    {
+        id: "new-added-22",
+        title: "Site Installation View 23",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.51-pm.jpeg",
+    },
+    {
+        id: "new-added-23",
+        title: "Site Installation View 24",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.56-pm.jpeg",
+    },
+    {
+        id: "new-added-24",
+        title: "Site Installation View 25",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.56-pm1.jpeg",
+    },
+    {
+        id: "new-added-25",
+        title: "Site Installation View 26",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.57-p1.jpeg",
+    },
+    {
+        id: "new-added-26",
+        title: "Site Installation View 27",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.57-pm22.jpeg",
+    },
+    {
+        id: "new-added-27",
+        title: "Site Installation View 28",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.08.58-pm11.jpeg",
+    },
+    {
+        id: "new-added-28",
+        title: "Site Installation View 29",
+        category: "New Arrival",
+        description: "Part of our latest collection of high-quality polycarbonate sheets.",
+        image: "/products/whatsapp-image-2026-01-01-at-12.16.46-pm.jpeg",
     }
 ];
 
@@ -230,6 +433,7 @@ export default function ProductsPage() {
     const diamondSheets = products.filter(p => matchCategory(p, ["Textured", "Security & Glazing", "Design"]) || p.title.toLowerCase().includes("diamond") || p.title.toLowerCase().includes("prismatic"));
     const embossedSheets = products.filter(p => p.category === "Embossed" || p.title.toLowerCase().includes("embossed"));
     const roofingSheets = products.filter(p => p.category === "Roofing" || p.category === "Industrial");
+    const newArrivals = products.filter(p => p.category === "New Arrival");
 
     // Helper to avoid duplicates (Diamond/Embossed might overlap with logic above, so we prioritize specific textures)
     // Clean up diamond/embossed from compact if they slipped in
@@ -365,6 +569,7 @@ export default function ProductsPage() {
 
             {/* Product Sections */}
             <div className="space-y-20 py-20">
+                <ProductCategorySection title="New Arrivals" products={newArrivals} />
                 <ProductCategorySection title="Solid & Compact Sheets" products={cleanCompact} />
                 <ProductCategorySection title="Diamond & Textured Sheets" products={diamondSheets} />
                 <ProductCategorySection title="Embossed Sheets" products={embossedSheets} />
