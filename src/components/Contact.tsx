@@ -39,7 +39,7 @@ export function Contact() {
                                     <Mail className="w-6 h-6 text-accent mt-1" />
                                     <div>
                                         <h3 className="font-semibold text-lg">Email Us</h3>
-                                        <p className="text-blue-200">sales@jahanpolymers.com</p>
+                                        <p className="text-blue-200">Jahanpolimars88@gmail.com</p>
                                     </div>
                                 </div>
                             </div>

@@ -88,7 +88,7 @@ export default function ContactPage() {
                     <ContactCard
                         icon={<Mail className="w-6 h-6 text-white" />}
                         title="Sales Inquiry"
-                        detail="sales@jumbolite.co.in"
+                        detail="Jahanpolimars88@gmail.com"
                         subDetail="For quotes & product info"
                         color="bg-accent"
                     />

@@ -30,7 +30,7 @@ export function Navbar() {
                     <div className="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
                         <div className="flex space-x-6">
                             <span className="flex items-center"><Phone className="w-4 h-4 mr-2" /> +91 98765 43210</span>
-                            <span className="flex items-center"><Mail className="w-4 h-4 mr-2" /> sales@jumbolite.co.in</span>
+                            <span className="flex items-center"><Mail className="w-4 h-4 mr-2" /> Jahanpolimars88@gmail.com</span>
                         </div>
                         <div className="flex space-x-4">
                             <a href="https://www.facebook.com/people/Jahan-Polymers/61561305820022/#" target="_blank" rel="noopener noreferrer">
@@ -53,9 +53,9 @@ export function Navbar() {
                             {/* Logo */}
                             <div className="flex-shrink-0 flex items-center">
                                 <Link href="/">
-                                    <div className="relative w-40 h-12">
+                                    <div className="relative w-64 h-20">
                                         <Image
-                                            src="/logo.png"
+                                            src="/logo.jpg"
                                             alt="Jahan Polymers Logo"
                                             fill
                                             className="object-contain object-left"
