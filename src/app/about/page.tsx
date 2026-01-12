@@ -30,7 +30,7 @@ export default function AboutPage() {
                             Pioneering Polymer <br /> Excellence
                         </h1>
                         <p className="text-xl text-blue-100 leading-relaxed font-light">
-                            Manufacturer of Premium Polycarbonate & Acrylic Sheets under the brand <strong className="text-white font-semibold">JP JumboLite</strong>.
+                            Manufacturer of Premium Polycarbonate Sheets under the brand <strong className="text-white font-semibold">JP JumboLite</strong>.
                         </p>
                     </motion.div>
                 </div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
 
                             <div className="prose prose-lg text-slate-600 space-y-6">
                                 <p>
-                                    <strong>Jahan Polymers Pvt. Ltd.</strong> is a premier manufacturing company established in 2023, located in the industrial hub of <strong>Bagru, Jaipur (Rajasthan)</strong>. We specialize in the production of high-quality Polycarbonate and Acrylic sheets that cater to a diverse range of architectural, industrial, and agricultural needs.
+                                    <strong>Jahan Polymers Pvt. Ltd.</strong> is a premier manufacturing company established in 2023, located in the industrial hub of <strong>Jaipur (Rajasthan)</strong>. We specialize in the production of high-quality Polycarbonate   sheets that cater to a diverse range of architectural, industrial, and agricultural needs.
                                 </p>
                                 <p>
                                     Operating under our flagship brand <strong>JP JumboLite</strong>, we are committed to setting new standards in the industry. Our facility is equipped with state-of-the-art extrusion technology, ensuring that every sheet we produce meets rigorous quality benchmarks.
@@ -68,7 +68,7 @@ export default function AboutPage() {
                                     <span className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Established</span>
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-3xl font-bold text-primary">Bagru</span>
+                                    <span className="text-3xl font-bold text-primary"></span>
                                     <span className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Factory Location</span>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
                             className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl group"
                         >
                             <Image
-                                src="/products/polycarbonate-compact-sheet-500x500.webp"
+                                src="/products/diamond-polycarbonate-sheet-500x500.webp"
                                 alt="Clear Polycarbonate Sheet"
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -117,7 +117,7 @@ export default function AboutPage() {
                         <FeatureCard
                             icon={<Factory className="w-10 h-10 text-blue-400" />}
                             title="Advanced Manufacturing"
-                            desc="Located in Bagru, our facility utilizes the latest extrusion machinery for consistent thickness and quality control."
+                            desc="Located in , our facility utilizes the latest extrusion machinery for consistent thickness and quality control."
                         />
                         <FeatureCard
                             icon={<Leaf className="w-10 h-10 text-green-400" />}

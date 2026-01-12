@@ -176,7 +176,6 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                                     className="w-full px-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 focus:border-accent outline-none focus:ring-2 focus:ring-accent/10 transition-all text-sm"
                                                 >
                                                     <option>Polycarbonate Sheet</option>
-                                                    <option>Acrylic Sheet</option>
                                                     <option>Roofing Solutions</option>
                                                     <option>Embossed/Textured</option>
                                                     <option>Other</option>

@@ -17,12 +17,6 @@ export function Products() {
             gradient: "from-purple-500 to-indigo-500",
         },
         {
-            title: "Acrylic Sheets",
-            category: "Design & Display",
-            description: "Premium optical clarity and UV stability. Used for signage, displays, and modern furniture.",
-            gradient: "from-teal-500 to-emerald-500",
-        },
-        {
             title: "Embossed & Textured",
             category: "Privacy & Aesthetics",
             description: "Unique textures for privacy and light diffusion. Stylish solutions for interior design.",
@@ -38,7 +32,7 @@ export function Products() {
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Our Premium Products</h2>
                     <p className="text-neutral-400 max-w-2xl mx-auto">
-                        Discover our range of world-class polycarbonate and acrylic sheets designed for every application.
+                        Discover our range of world-class polycarbonate sheets designed for every application.
                     </p>
                 </div>
 

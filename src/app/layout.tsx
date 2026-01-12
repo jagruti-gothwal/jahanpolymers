@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jahan Polymers | Premium Polycarbonate & Acrylic Sheets",
-  description: "Manufacturer of high-quality Polycarbonate and Acrylic sheets. UV Protection, Unbreakable, and Best in Class.",
+  title: "Jahan Polymers | Premium Polycarbonate Sheets",
+  description: "Manufacturer of high-quality Polycarbonate sheets. UV Protection, Unbreakable, and Best in Class.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dark-bg text-foreground overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-50 text-slate-900 overflow-x-hidden`}
       >
         <Navbar />
         {children}

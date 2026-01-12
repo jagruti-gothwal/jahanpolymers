@@ -12,7 +12,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <h2 className="text-2xl font-bold">Jahan<span className="text-accent">Polymers</span></h2>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Leading manufacturer of premium quality Polycarbonate and Acrylic sheets. Committed to excellence, durability, and innovation.
+                            Leading manufacturer of premium quality Polycarbonate sheets. Committed to excellence, durability, and innovation.
                         </p>
                         <div className="flex space-x-4 pt-2">
                             <SocialIcon href="https://www.facebook.com/people/Jahan-Polymers/61561305820022/#" icon={<Facebook className="w-5 h-5" />} />
@@ -36,11 +36,9 @@ export function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-6 text-white border-b-2 border-primary inline-block pb-2">Our Products</h3>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            <li><Link href="/products" className="hover:text-accent transition-colors">Polycarbonate Multiwall</Link></li>
                             <li><Link href="/products" className="hover:text-accent transition-colors">Solid Compact Sheets</Link></li>
                             <li><Link href="/products" className="hover:text-accent transition-colors">Embossed Sheets</Link></li>
-                            <li><Link href="/products" className="hover:text-accent transition-colors">Cast Acrylic</Link></li>
-                            <li><Link href="/products" className="hover:text-accent transition-colors">Profiling Sheets</Link></li>
+                            <li><Link href="/products" className="hover:text-accent transition-colors">Diamond Sheets</Link></li>
                         </ul>
                     </div>
 
@@ -52,12 +50,8 @@ export function Footer() {
                                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                                 <div className="space-y-2">
                                     <div>
-                                        <div className="font-semibold text-white text-xs uppercase tracking-wider mb-1">Office</div>
-                                        <span>C-31, 6D Engineers Colony, New Sanganer Road, Mansarovar, Jaipur, Rajasthan, 302020</span>
-                                    </div>
-                                    <div>
                                         <div className="font-semibold text-white text-xs uppercase tracking-wider mb-1">Factory</div>
-                                        <span>F-126-127, RIICO Industrial Area Bagru, Ext IInd, Bagru, Jaipur, Rajasthan, 303007</span>
+                                        <span>F-126-127, RIICO Industrial Area , Ext IInd, , Jaipur, Rajasthan, 303007</span>
                                     </div>
                                 </div>
                             </li>

@@ -23,7 +23,7 @@ export function Contact() {
                                     <MapPin className="w-6 h-6 text-accent mt-1" />
                                     <div>
                                         <h3 className="font-semibold text-lg">Visit Us</h3>
-                                        <p className="text-blue-200">123 Industrial Area, Phase 2, New Delhi, India</p>
+                                        <p className="text-blue-200">F-126-127, RIICO Industrial Area, Ext IInd, Jaipur, Rajasthan, 303007</p>
                                     </div>
                                 </div>
 

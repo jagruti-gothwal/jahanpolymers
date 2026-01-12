@@ -6,10 +6,11 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export function Hero() {
     return (
-        <div className="relative min-h-[90vh] flex items-center bg-neutral-50 overflow-hidden pt-20">
+        <div className="relative min-h-[90vh] flex items-center bg-white overflow-hidden pt-20">
             {/* Background Shapes */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/50 clip-path-slant hidden lg:block" />
-            <div className="absolute -left-20 top-20 w-96 h-96 bg-orange-100 rounded-full blur-3xl opacity-50" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/30 clip-path-slant hidden lg:block" />
+            <div className="absolute -left-20 top-20 w-96 h-96 bg-orange-100/50 rounded-full blur-3xl opacity-50" />
+            <div className="absolute right-0 bottom-0 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl opacity-50" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -19,7 +20,7 @@ export function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-primary font-semibold text-sm mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm mb-6 border border-blue-100">
                             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                             Premium Polycarbonate Sheets - Est. 2023
                         </div>
@@ -39,7 +40,7 @@ export function Hero() {
                             <a href="/products" className="px-8 py-4 rounded-lg bg-primary text-white font-bold hover:bg-blue-800 transition-all shadow-lg hover:shadow-blue-500/30 flex items-center justify-center gap-2 group">
                                 Explore Our Range <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <a href="/contact" className="px-8 py-4 rounded-lg border-2 border-gray-300 text-gray-700 font-bold hover:border-primary hover:text-primary transition-all flex items-center justify-center">
+                            <a href="/contact" className="px-8 py-4 rounded-lg border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:text-primary transition-all flex items-center justify-center bg-white">
                                 Contact Factory
                             </a>
                         </div>
@@ -63,10 +64,10 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="relative h-[600px] hidden lg:block"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-tr from-primary to-transparent rounded-[2rem] transform rotate-3 opacity-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-tr from-primary to-transparent rounded-[2rem] transform rotate-3 opacity-5"></div>
                         <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                             <Image
-                                src="/products/polycarbonate-sheet-roll-1000x1000.webp"
+                                src="/products/b9ed1bfd327bc45bdfed0e795f195ffa.jpg"
                                 alt="JP JumboLite Polycarbonate Roll"
                                 fill
                                 className="object-cover"
@@ -82,6 +83,19 @@ export function Hero() {
 
                 </div>
             </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 1 }}
+                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400"
+            >
+                <span className="text-xs uppercase tracking-widest">Scroll</span>
+                <div className="w-0.5 h-12 bg-gray-200 overflow-hidden">
+                    <div className="w-full h-1/2 bg-primary animate-shimmer" />
+                </div>
+            </motion.div>
         </div>
     );
 }

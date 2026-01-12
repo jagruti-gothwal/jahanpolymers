@@ -94,15 +94,8 @@ export default function ContactPage() {
                     />
                     <ContactCard
                         icon={<MapPin className="w-6 h-6 text-white" />}
-                        title="Corporate Office"
-                        detail="Mansarovar, Jaipur"
-                        subDetail="C-31, 6D Engineers Colony"
-                        color="bg-blue-600"
-                    />
-                    <ContactCard
-                        icon={<MapPin className="w-6 h-6 text-white" />}
                         title="Manufacturing Unit"
-                        detail="Bagru, RIICO Area"
+                        detail=", RIICO Area"
                         subDetail="F-126-127, RIICO Ind. Area"
                         color="bg-slate-800"
                     />
@@ -239,9 +232,9 @@ export default function ContactPage() {
                     >
                         {/* Map */}
                         <div className="h-[400px] w-full bg-slate-200 rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
-                            {/* Embed Google Map for Bagru Area */}
+                            {/* Embed Google Map for  Area */}
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.07729221596!2d75.5298889!3d26.8122222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c439a8c187280!2sBagru%2C%20Rajasthan%20303007!5e0!3m2!1sen!2sin!4v1709321234567!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.07729221596!2d75.5298889!3d26.8122222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c439a8c187280!2s%2C%20Rajasthan%20303007!5e0!3m2!1sen!2sin!4v1709321234567!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
@@ -259,21 +252,13 @@ export default function ContactPage() {
                                 Location Details
                             </h4>
                             <div className="space-y-6">
-                                <div className="pl-10 relative">
-                                    <div className="absolute left-3 top-2 w-1.5 h-1.5 bg-accent rounded-full"></div>
-                                    <h5 className="font-bold text-slate-800">Corporate Office</h5>
-                                    <p className="text-slate-500 text-sm leading-relaxed mt-1">
-                                        C-31, 6D Engineers Colony, New Sanganer Road,<br />
-                                        Mansarovar, Jaipur, Rajasthan, 302020
-                                    </p>
-                                </div>
                                 <div className="w-full h-px bg-slate-100 my-2"></div>
                                 <div className="pl-10 relative">
                                     <div className="absolute left-3 top-2 w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
                                     <h5 className="font-bold text-slate-800">Factory / Works</h5>
                                     <p className="text-slate-500 text-sm leading-relaxed mt-1">
-                                        F-126-127, RIICO Industrial Area Bagru,<br />
-                                        Ext IInd, Bagru, Jaipur, Rajasthan, 303007
+                                        F-126-127, RIICO Industrial Area ,<br />
+                                        Ext IInd, , Jaipur, Rajasthan, 303007
                                     </p>
                                 </div>
                             </div>
