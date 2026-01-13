@@ -66,8 +66,7 @@ export function Footer() {
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p>© {new Date().getFullYear()} Jahan Polymers Pvt. Ltd. All rights reserved.</p>
                     <div className="flex items-center gap-6 mt-4 md:mt-0">
-                        <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <span>Site by J. Studio</span>
+                        <span>Designed and Developed by A.J. Studio</span>
                     </div>
                 </div>
             </div>
