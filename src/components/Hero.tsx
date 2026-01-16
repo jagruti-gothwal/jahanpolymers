@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export function Hero() {
     return (
-        <div className="relative min-h-[90vh] flex items-center bg-white overflow-hidden pt-20">
+        <div className="relative min-h-[90vh] flex items-center bg-white overflow-hidden pt-44">
             {/* Background Shapes */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/30 clip-path-slant hidden lg:block" />
             <div className="absolute -left-20 top-20 w-96 h-96 bg-orange-100/50 rounded-full blur-3xl opacity-50" />

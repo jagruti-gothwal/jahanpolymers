@@ -15,8 +15,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jahan Polymers | Premium Polycarbonate Sheets",
-  description: "Manufacturer of high-quality Polycarbonate sheets. UV Protection, Unbreakable, and Best in Class.",
+  title: {
+    default: "Jahan Polymers | Premium Polycarbonate Sheets Manufacturer",
+    template: "%s | Jahan Polymers"
+  },
+  description: "India's leading manufacturer of high-quality Polycarbonate sheets. Specializing in Multiwall, Solid Compact, Diamond, and Embossed sheets. UV Protection, Unbreakable, and Best in Class durability.",
+  keywords: ["Polycarbonate Sheets", "Jahan Polymers", "JumboLite", "Roofing Sheets", "Industrial Roofing", "Greenhouse Cladding", "Compact Polycarbonate", "Diamond Textured Sheets", "Jaipur Manufacturer"],
+  authors: [{ name: "Jahan Polymers Pvt. Ltd." }],
+  creator: "Jahan Polymers",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://jahanpolymers.com",
+    title: "Jahan Polymers | Premium Polycarbonate Sheets",
+    description: "Discover superior quality Polycarbonate sheets for industrial, agricultural, and residential use. Engineered for strength and clarity.",
+    siteName: "Jahan Polymers",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jahan Polymers | Premium Polycarbonate Solutions",
+    description: "Leading manufacturer of UV-protected, high-impact Polycarbonate sheets.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({

@@ -19,7 +19,20 @@ export function Navbar() {
             setScrolled(window.scrollY > 20);
         };
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+
+        // Auto-open quote modal after 5 seconds
+        const timer = setTimeout(() => {
+            const hasSeenQuote = sessionStorage.getItem("hasSeenQuote");
+            if (!hasSeenQuote) {
+                setIsQuoteOpen(true);
+                sessionStorage.setItem("hasSeenQuote", "true");
+            }
+        }, 5000);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            clearTimeout(timer);
+        };
     }, []);
 
     return (
@@ -46,14 +59,14 @@ export function Navbar() {
                 {/* Main Nav */}
                 <nav className={cn(
                     "bg-white transition-all duration-300 border-b border-gray-100",
-                    scrolled ? "shadow-md py-2" : "py-4"
+                    scrolled ? "shadow-md py-1" : "py-2"
                 )}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex items-center justify-between">
                             {/* Logo */}
                             <div className="flex-shrink-0 flex items-center">
                                 <Link href="/">
-                                    <div className="relative w-64 h-20">
+                                    <div className="relative w-96 h-30">
                                         <Image
                                             src="/logo.jpg"
                                             alt="Jahan Polymers Logo"

@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Award, Users, Globe, CheckCircle, Factory, ShieldCheck, Leaf } from "lucide-react";
+import { IndustriesServed } from "@/components/IndustriesServed";
+
 
 export default function AboutPage() {
     return (
@@ -132,6 +134,9 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Industries Served Section */}
+            <IndustriesServed />
 
             {/* Vision Quote */}
             <section className="py-24 bg-accent/5">

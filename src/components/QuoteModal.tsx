@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { X, CheckCircle, Loader2, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface QuoteModalProps {
     isOpen: boolean;
@@ -83,7 +84,17 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg pointer-events-auto overflow-hidden flex flex-col max-h-[90vh]">
                             {/* Header */}
                             <div className="bg-primary px-6 py-4 flex justify-between items-center text-white shrink-0">
-                                <h2 className="text-xl font-bold">Request a Quote</h2>
+                                <div className="flex items-center gap-3">
+                                    <div className="relative w-24 h-8 bg-white/90 rounded px-2 flex items-center justify-center">
+                                        <Image
+                                            src="/logo.jpg"
+                                            alt="Logo"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <h2 className="text-xl font-bold">Request a Quote</h2>
+                                </div>
                                 <button onClick={onClose} className="hover:bg-white/20 p-1 rounded-full transition-colors">
                                     <X className="w-6 h-6" />
                                 </button>

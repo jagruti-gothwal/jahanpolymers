@@ -3,6 +3,7 @@ import { VisionSection } from "@/components/VisionSection";
 import { ProductsSection } from "@/components/ProductsSection";
 import { Contact } from "@/components/Contact";
 import { GallerySection } from "@/components/GallerySection";
+import { BrochureSection } from "@/components/BrochureSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <VisionSection />
       <ProductsSection />
       <GallerySection />
+      <BrochureSection />
       <div className="bg-neutral-50">
         <Contact />
       </div>

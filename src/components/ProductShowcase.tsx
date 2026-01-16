@@ -78,20 +78,21 @@ export function ProductShowcase({ products }: { products: Product[] }) {
                         <button
                             onClick={() => setShowFilters(!showFilters)}
                             className={cn(
-                                "flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all shadow-sm border",
+                                "flex items-center gap-2 px-5 py-2.5 rounded-full font-medium transition-all duration-300 text-sm",
                                 showFilters
-                                    ? "bg-slate-900 text-white border-slate-900 hover:bg-slate-800"
-                                    : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300"
+                                    ? "bg-slate-900 text-white ring-2 ring-slate-900 ring-offset-2"
+                                    : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 hover:border-slate-300"
                             )}
                         >
                             <SlidersHorizontal className="w-4 h-4" />
                             Filters
                         </button>
-                        <div className="text-sm text-slate-500 font-medium whitespace-nowrap">
-                            <span className="font-bold text-slate-900">{filteredProducts.length}</span> Products
+                        <div className="text-sm text-slate-500 font-medium whitespace-nowrap bg-white px-4 py-2.5 rounded-full border border-slate-100 shadow-sm">
+                            <span className="font-bold text-slate-900">{filteredProducts.length}</span> results found
                         </div>
                     </div>
                 </div>
+
 
                 {/* Categories - Expandable */}
                 <AnimatePresence>
@@ -102,31 +103,30 @@ export function ProductShowcase({ products }: { products: Product[] }) {
                             exit={{ height: 0, opacity: 0, marginBottom: 0 }}
                             className="overflow-hidden"
                         >
-                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                            <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Categories</h3>
+                                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Filter by Category</h3>
                                     {activeCategory !== "all" && (
                                         <button
                                             onClick={() => setActiveCategory("all")}
-                                            className="text-xs font-medium text-primary hover:underline"
+                                            className="text-xs font-medium text-primary hover:text-primary/70 transition-colors"
                                         >
-                                            Reset
+                                            Clear Filters
                                         </button>
                                     )}
                                 </div>
-                                <div className="flex flex-wrap gap-3">
+                                <div className="flex flex-wrap gap-2">
                                     {categories.map((cat) => (
                                         <button
                                             key={cat.id}
                                             onClick={() => setActiveCategory(cat.id)}
                                             className={cn(
-                                                "px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 border flex items-center gap-2",
+                                                "px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border",
                                                 activeCategory === cat.id
-                                                    ? "bg-primary text-white border-primary shadow-md shadow-primary/25 transform scale-105"
-                                                    : "bg-slate-50 text-slate-600 border-slate-100 hover:bg-white hover:border-slate-200 hover:shadow-sm"
+                                                    ? "bg-slate-900 text-white border-slate-900 shadow-lg shadow-slate-900/20"
+                                                    : "bg-white text-slate-600 border-slate-200 hover:border-primary/50 hover:text-slate-900"
                                             )}
                                         >
-                                            {activeCategory === cat.id && <Check className="w-3.5 h-3.5" />}
                                             {cat.label}
                                         </button>
                                     ))}
@@ -139,7 +139,7 @@ export function ProductShowcase({ products }: { products: Product[] }) {
                 {/* Grid */}
                 <motion.div
                     layout
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                 >
                     <AnimatePresence mode="popLayout">
                         {filteredProducts.map((product) => (
@@ -156,17 +156,17 @@ export function ProductShowcase({ products }: { products: Product[] }) {
                 {filteredProducts.length === 0 && (
                     <div className="text-center py-32">
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-slate-100 mb-6">
-                            <Search className="w-10 h-10 text-slate-400" />
+                            <Search className="w-10 h-10 text-slate-300" />
                         </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-2">No products found</h3>
-                        <p className="text-slate-500 max-w-md mx-auto mb-8">
-                            We couldn't find any products matching "{searchQuery}". Try adjusting your search or filters.
+                        <h3 className="text-lg font-bold text-slate-900 mb-2">No products found</h3>
+                        <p className="text-slate-500 max-w-sm mx-auto mb-8 text-sm">
+                            We couldn't find matches for "{searchQuery}". Try a broader term.
                         </p>
                         <button
                             onClick={() => { setActiveCategory("all"); setSearchQuery(""); }}
-                            className="px-6 py-3 bg-white border border-slate-200 text-slate-900 font-semibold rounded-full hover:bg-slate-50 transition-colors"
+                            className="px-6 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-full hover:bg-slate-800 transition-colors shadow-lg shadow-slate-900/10"
                         >
-                            Clear all filters
+                            Reset Search
                         </button>
                     </div>
                 )}
@@ -178,7 +178,7 @@ export function ProductShowcase({ products }: { products: Product[] }) {
                     <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
                 )}
             </AnimatePresence>
-        </section>
+        </section >
     );
 }
 
@@ -186,46 +186,50 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
     return (
         <motion.div
             layout
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            whileHover={{ y: -8 }}
-            className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 cursor-pointer flex flex-col h-full transition-all duration-300"
+            exit={{ opacity: 0, scale: 0.95 }}
+            whileHover={{ y: -5 }}
+            className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-slate-200/50 border border-slate-100 cursor-pointer flex flex-col h-full transition-all duration-300"
             onClick={onClick}
         >
-            <div className="relative aspect-square overflow-hidden bg-slate-50">
+            <div className="relative aspect-square overflow-hidden bg-slate-50/50 m-2 rounded-2xl">
                 <Image
                     src={product.image}
                     alt={product.title}
                     fill
-                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-110"
+                    className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-white/95 backdrop-blur text-slate-900 px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-                        <ZoomIn className="w-4 h-4" /> Quick View
-                    </span>
+
+                {/* Hover Quick View Trigger */}
+                <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-slate-900/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white text-slate-900 px-4 py-2 rounded-full text-xs font-bold shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2">
+                        <ZoomIn className="w-3 h-3" /> Quick View
+                    </div>
                 </div>
 
-                {/* Badge */}
-                {product.category === "New Arrival" && (
-                    <div className="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide">
-                        NEW
-                    </div>
-                )}
+                {/* Tags */}
+                <div className="absolute top-3 left-3 flex flex-col gap-2">
+                    {product.category === "New Arrival" && (
+                        <div className="bg-slate-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide w-fit">
+                            NEW
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div className="p-5 flex flex-col flex-grow">
-                <div className="text-xs font-bold text-primary uppercase tracking-wider mb-2 opacity-80">
-                    {product.category}
+                <div className="mb-1">
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{product.category}</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-primary transition-colors">
+                <h3 className="text-base font-bold text-slate-900 mb-2 leading-relaxed group-hover:text-primary transition-colors">
                     {product.title}
                 </h3>
-                <p className="text-slate-500 text-sm line-clamp-2 mb-4 flex-grow leading-relaxed">
-                    {product.description}
-                </p>
-                <div className="flex items-center text-sm font-bold text-slate-400 group-hover:text-accent transition-colors mt-auto pt-4 border-t border-slate-50">
-                    View Details <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
+                    <span className="text-xs font-medium text-slate-400 group-hover:text-slate-600 transition-colors">View Specs</span>
+                    <div className="w-8 h-8 rounded-full bg-slate-50 group-hover:bg-primary/10 flex items-center justify-center transition-colors">
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary transition-colors" />
+                    </div>
                 </div>
             </div>
         </motion.div>
