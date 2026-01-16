@@ -8,19 +8,19 @@ import { motion } from "framer-motion";
 const categories = [
     {
         title: "Solid Compact Sheets",
-        image: "/products/compact-polycarbonate-sheet-500x500.webp",
+        image: "/products/WhatsApp Image 2026-01-16 at 5.02.53 PM (2).jpeg",
         desc: "High-impact transparent and coloured compact sheets.",
         link: "/products"
     },
     {
         title: "Diamond & Textured",
-        image: "/products/Jumbolite 3mm Transparent Dimand Polycarbonate Sheet.webp",
+        image: "/products/WhatsApp Image 2026-01-16 at 5.02.53 PM.jpeg",
         desc: "Decorative diamond and prismatic textures for light diffusion.",
         link: "/products"
     },
     {
         title: "Embossed & Roofing",
-        image: "/products/2mm Jumbolite Polycarbonate Roofing Sheet.webp",
+        image: "/products/WhatsApp Image 2026-01-16 at 5.02.54 PM.jpeg",
         desc: "Durable embossed sheets and roofing profiles for industrial use.",
         link: "/products"
     }

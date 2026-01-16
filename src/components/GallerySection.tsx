@@ -8,37 +8,37 @@ import { cn } from "@/lib/utils";
 const galleryItems = [
     {
         id: 1,
-        src: "/products/jumbolite-embossed-brown-sheet-1000x1000.webp",
+        src: "/products/WhatsApp Image 2026-01-16 at 5.02.54 PM (1).jpeg",
         title: "Architectural Cladding",
         category: "Exterior Design",
     },
     {
         id: 2,
-        src: "/products/1.jpeg",
+        src: "/products/WhatsApp Image 2026-01-16 at 5.02.55 PM (1).jpeg",
         title: "Greenhouse Glazing",
         category: "Agriculture",
     },
     {
         id: 3,
-        src: "/products/coloured-polycarbonate-sheet-500x500.webp",
+        src: "/products/WhatsApp Image 2026-01-16 at 5.02.55 PM (2).jpeg",
         title: "Interior Partitions",
         category: "Interior Design",
     },
     {
         id: 4,
-        src: "/products/polycarbonate-sheet-roll-1000x1000.webp",
+        src: "/products/WhatsApp Image 2026-01-16 at 5.02.56 PM (1).jpeg",
         title: "Industrial Roofing",
         category: "Construction",
     },
     {
         id: 5,
-        src: "/products/4.jpeg",
+        src: "/products/WhatsApp Image 2026-01-16 at 5.02.57 PM (1).jpeg",
         title: "Skylight Domes",
         category: "Natural Lighting",
     },
     {
         id: 6,
-        src: "/products/Jumbolite 3mm Transparent Dimand Polycarbonate Sheet.webp",
+        src: "/products/WhatsApp Image 2026-01-16 at 5.02.58 PM (1).jpeg",
         title: "Security Glazing",
         category: "Safety & Security",
     },

@@ -11,7 +11,7 @@ export default function AboutPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-primary">
                 <div className="absolute inset-0">
                     <Image
-                        src="/products/polycarbonate-sheet-roll-1000x1000.webp"
+                        src="/products/WhatsApp Image 2026-01-16 at 5.02.58 PM (1).jpeg"
                         alt="Jahan Polymers Factory Stock"
                         fill
                         className="object-cover opacity-30 mix-blend-overlay"
@@ -81,7 +81,7 @@ export default function AboutPage() {
                             className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl group"
                         >
                             <Image
-                                src="/products/diamond-polycarbonate-sheet-500x500.webp"
+                                src="/products/WhatsApp Image 2026-01-16 at 5.02.57 PM (1).jpeg"
                                 alt="Clear Polycarbonate Sheet"
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-700"

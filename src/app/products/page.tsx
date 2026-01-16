@@ -12,7 +12,7 @@ export default function ProductsPage() {
             <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-primary">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/products/polycarbonate-sheet-roll-1000x1000.webp"
+                        src="/products/WhatsApp Image 2026-01-16 at 5.02.53 PM (1).jpeg"
                         alt="Products Hero"
                         fill
                         className="object-cover opacity-20 mix-blend-overlay"

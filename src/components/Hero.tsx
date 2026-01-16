@@ -28,7 +28,7 @@ export function Hero() {
                         <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
                             The Standard of <br />
                             <span className="text-primary">Clarity</span> & Strength <br />
-                            <span className="text-accent">JP JumboLite</span>
+                            <span className="text-accent">JP JumboLite ®</span>
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
