@@ -66,7 +66,7 @@ export function Navbar() {
                             {/* Logo */}
                             <div className="flex-shrink-0 flex items-center">
                                 <Link href="/">
-                                    <div className="relative w-96 h-30">
+                                    <div className="relative w-56 h-14 sm:w-72 sm:h-20 md:w-80 md:h-20 lg:w-96 lg:h-24">
                                         <Image
                                             src="/logo.jpg"
                                             alt="Jahan Polymers Logo"
@@ -111,7 +111,7 @@ export function Navbar() {
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
-                                className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
+                                className="md:hidden bg-white border-t border-gray-100 overflow-hidden shadow-inner"
                             >
                                 <div className="px-4 pt-2 pb-6 space-y-2">
                                     <MobileNavLink href="/" onClick={() => setIsOpen(false)}>Home</MobileNavLink>
