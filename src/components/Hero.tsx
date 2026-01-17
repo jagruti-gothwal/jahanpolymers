@@ -2,100 +2,102 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Factory, ShieldCheck, Star } from "lucide-react";
 
 export function Hero() {
     return (
-        <div className="relative min-h-[90vh] flex items-center bg-white overflow-hidden pt-44">
-            {/* Background Shapes */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/30 clip-path-slant hidden lg:block" />
-            <div className="absolute -left-20 top-20 w-96 h-96 bg-orange-100/50 rounded-full blur-3xl opacity-50" />
-            <div className="absolute right-0 bottom-0 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl opacity-50" />
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm mb-6 border border-blue-100">
-                            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                            Premium Polycarbonate Sheets - Est. 2023
-                        </div>
-
-                        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
-                            The Standard of <br />
-                            <span className="text-primary">Clarity</span> & Strength <br />
-                            <span className="text-accent">JP JumboLite ®</span>
-                        </h1>
-
-                        <p className="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                            Discover high-quality polycarbonate sheets made from 100% Virgin Material.
-                            Engineered for durability, transparency, and architectural excellence.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                            <a href="/products" className="px-8 py-4 rounded-lg bg-primary text-white font-bold hover:bg-blue-800 transition-all shadow-lg hover:shadow-blue-500/30 flex items-center justify-center gap-2 group">
-                                Explore Our Range <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <a href="/contact" className="px-8 py-4 rounded-lg border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:text-primary transition-all flex items-center justify-center bg-white">
-                                Contact Factory
-                            </a>
-                        </div>
-
-                        <div className="flex gap-6 text-sm font-medium text-gray-500">
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="text-green-500 w-5 h-5" /> Virgin Material
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="text-green-500 w-5 h-5" /> High Impact
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="text-green-500 w-5 h-5" /> UV Stabilized
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative h-[600px] hidden lg:block"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-tr from-primary to-transparent rounded-[2rem] transform rotate-3 opacity-5"></div>
-                        <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image
-                                src="/products/b9ed1bfd327bc45bdfed0e795f195ffa.jpg"
-                                alt="JP JumboLite Polycarbonate Roll"
-                                fill
-                                className="object-cover"
-                            />
-
-                            {/* Floating Badge */}
-                            <div className="absolute bottom-10 left-10 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg border border-white/50 max-w-xs">
-                                <p className="text-primary font-bold text-lg">JP JumboLite®</p>
-                                <p className="text-gray-500 text-sm">Best Class Quality</p>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                </div>
+        <div className="relative min-h-[90vh] flex flex-col justify-center items-center bg-slate-50 overflow-hidden pt-20">
+            {/* Background Video with Light Overlay */}
+            <div className="absolute inset-0 z-0">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="object-cover w-full h-full "
+                    poster="/project/factory.png" // Fallback image
+                >
+                    <source src="/products/jahanpoly.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-50/95 via-slate-50/80 to-slate-50/95 opacity-80" />
             </div>
 
-            {/* Scroll Indicator */}
+            {/* Main Content */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-5xl mx-auto"
+                >
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-primary font-bold text-sm mb-8 border border-blue-100 uppercase tracking-wider shadow-sm">
+                        <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                        India's Leading Polycarbonate Manufacturer
+                    </div>
+
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-6 tracking-tight">
+                        Strength meets <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Clarity</span>
+                    </h1>
+
+                    <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-normal">
+                        Premium quality <strong className="text-slate-900">JP JumboLite®</strong> Polycarbonate sheets. <br className="hidden md:block" />
+                        Engineered with 100% Virgin Material for unmatched durability.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                        <a href="/products" className="px-8 py-3 rounded-full bg-primary text-white font-bold text-base hover:bg-blue-800 transition-all shadow-xl shadow-blue-500/20 flex items-center justify-center gap-2 group hover:-translate-y-1">
+                            Explore Products <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        <a href="/contact" className="px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2 hover:-translate-y-1 shadow-md hover:shadow-lg text-base">
+                            Get a Quote
+                        </a>
+                    </div>
+                </motion.div>
+            </div>
+
+            {/* Premium Stats Bar - Clean Light Style */}
             <motion.div
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400"
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="relative z-10 w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-12"
             >
-                <span className="text-xs uppercase tracking-widest">Scroll</span>
-                <div className="w-0.5 h-12 bg-gray-200 overflow-hidden">
-                    <div className="w-full h-1/2 bg-primary animate-shimmer" />
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 bg-white rounded-2xl border border-slate-100 p-6 md:p-8 shadow-xl shadow-slate-200/50">
+                    <StatItem
+                        icon={<Factory className="w-6 h-6 text-blue-500" />}
+                        label="Manufacturing Unit"
+                        value="Bagru, Jaipur"
+                    />
+                    <StatItem
+                        icon={<ShieldCheck className="w-6 h-6 text-green-500" />}
+                        label="Quality Promise"
+                        value="100% Virgin Material"
+                    />
+                    <StatItem
+                        icon={<Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />}
+                        label="Client Satisfaction"
+                        value="4.9/5 Rating"
+                    />
+                    <StatItem
+                        icon={<CheckCircle2 className="w-6 h-6 text-accent" />}
+                        label="Experience"
+                        value="Since 2023"
+                    />
                 </div>
             </motion.div>
         </div>
     );
+}
+
+function StatItem({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) {
+    return (
+        <div className="flex flex-col items-center text-center p-2 group">
+            <div className="mb-3 p-3 bg-slate-50 rounded-full border border-slate-100 group-hover:scale-110 transition-transform duration-300">
+                {icon}
+            </div>
+            <div className="text-lg md:text-xl font-bold text-slate-900 mb-1">{value}</div>
+            <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">{label}</div>
+        </div>
+    )
 }

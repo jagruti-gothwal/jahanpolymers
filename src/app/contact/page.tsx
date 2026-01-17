@@ -30,22 +30,17 @@ export default function ContactPage() {
         setError(null);
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/Jahanpolimars88@gmail.com", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'application/json'
                 },
-                body: JSON.stringify({
-                    ...formData,
-                    _subject: "New Inquiry from Website!",
-                    _template: "table"
-                })
+                body: JSON.stringify(formData)
             });
 
             const result = await response.json();
 
-            if (result.success === "true" || response.ok) {
+            if (result.success) {
                 setIsSubmitted(true);
             } else {
                 setError("Something went wrong. Please try again.");
@@ -95,8 +90,8 @@ export default function ContactPage() {
                     <ContactCard
                         icon={<MapPin className="w-6 h-6 text-white" />}
                         title="Manufacturing Unit"
-                        detail=", RIICO Area"
-                        subDetail="F-126-127, RIICO Ind. Area"
+                        detail="Bagru, Jaipur"
+                        subDetail="F-126-127, RIICO Ind. Area Bagru"
                         color="bg-slate-800"
                     />
                 </div>
@@ -232,9 +227,9 @@ export default function ContactPage() {
                     >
                         {/* Map */}
                         <div className="h-[400px] w-full bg-slate-200 rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
-                            {/* Embed Google Map for  Area */}
+                            {/* Embed Google Map for Area */}
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.07729221596!2d75.5298889!3d26.8122222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c439a8c187280!2s%2C%20Rajasthan%20303007!5e0!3m2!1sen!2sin!4v1709321234567!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.9464624376624!2d75.56896957543597!3d26.809833276708545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c499878bfd83f%3A0x5e89d74d134b8a60!2sJahan%20Polymers%20Private%20Limited!5e0!3m2!1sen!2sin!4v1768665897307!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
@@ -257,10 +252,11 @@ export default function ContactPage() {
                                     <div className="absolute left-3 top-2 w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
                                     <h5 className="font-bold text-slate-800">Factory / Works</h5>
                                     <p className="text-slate-500 text-sm leading-relaxed mt-1">
-                                        F-126-127, RIICO Industrial Area ,<br />
-                                        Ext IInd, , Jaipur, Rajasthan, 303007
+                                        F-126-127, RIICO Industrial Area Bagru,<br />
+                                        Ext IInd, Bagru, Jaipur, Rajasthan, 303007
                                     </p>
                                 </div>
+
                             </div>
                         </div>
                     </motion.div>

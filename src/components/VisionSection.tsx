@@ -39,7 +39,7 @@ export function VisionSection() {
                         <span className="text-primary font-bold tracking-wider uppercase text-sm">About JP JumboLite</span>
                         <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-6">Building a Sustainable Future with Advanced Polymers</h2>
                         <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                            At Jahan Polymers (Jaipur), our vision is to lead the industry through innovation and integrity. We strive to provide eco-friendly, energy-efficient, and durable solutions that empower architects and builders.
+                            At Jahan Polymers Private Limited (JP JumboLite), our vision is to lead the industry through innovation and integrity. We strive to provide eco-friendly, energy-efficient, and durable solutions that empower architects and builders.
                         </p>
 
                         <div className="space-y-4 mb-8">
@@ -56,9 +56,18 @@ export function VisionSection() {
                             ))}
                         </div>
 
-                        <a href="/about" className="inline-block px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors">
-                            Read Our Story
-                        </a>
+                        <div className="flex items-center gap-6">
+                            <a href="/about" className="inline-block px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors">
+                                Read Our Story
+                            </a>
+                            <Image
+                                src="/make-in-india.png"
+                                alt="Make in India"
+                                width={100}
+                                height={50}
+                                className="object-contain"
+                            />
+                        </div>
                     </div>
 
                 </div>

@@ -10,28 +10,29 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen bg-slate-50 text-slate-900 pt-20">
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-primary">
-                <div className="absolute inset-0">
+            <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
+                <div className="absolute inset-0 z-0">
                     <Image
-                        src="/products/WhatsApp Image 2026-01-16 at 5.02.58 PM (1).jpeg"
-                        alt="Jahan Polymers Factory Stock"
+                        src="/project/factory.png"
+                        alt="Jahan Polymers Factory"
                         fill
-                        className="object-cover opacity-30 mix-blend-overlay"
+                        className="object-cover opacity-20"
+                        priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/80" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900/90" />
                 </div>
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-white text-xs font-bold tracking-widest uppercase mb-4 border border-white/20">
+                        <span className="inline-block py-1 px-3 rounded-full bg-accent/20 text-accent border border-accent/20 text-sm font-semibold mb-6 tracking-wide uppercase">
                             Since 2023
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
                             Pioneering Polymer <br /> Excellence
                         </h1>
-                        <p className="text-xl text-blue-100 leading-relaxed font-light">
+                        <p className="text-xl text-slate-300 leading-relaxed font-light max-w-2xl mx-auto">
                             Manufacturer of Premium Polycarbonate Sheets under the brand <strong className="text-white font-semibold">JP JumboLite</strong>.
                         </p>
                     </motion.div>
@@ -64,13 +65,36 @@ export default function AboutPage() {
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-6 pt-6">
+                            {/* Company Fact Sheet */}
+                            <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                                <h3 className="font-bold text-slate-800 mb-4 text-lg border-b pb-2 border-slate-200">Company Highlights</h3>
+                                <ul className="space-y-3 text-sm">
+                                    <li className="flex flex-col sm:flex-row sm:justify-between text-slate-600 border-b border-slate-100 pb-2 last:border-0 last:pb-0">
+                                        <span className="font-semibold text-slate-800">Legal Status:</span>
+                                        <span>Private Limited Company</span>
+                                    </li>
+                                    <li className="flex flex-col sm:flex-row sm:justify-between text-slate-600 border-b border-slate-100 pb-2 last:border-0 last:pb-0">
+                                        <span className="font-semibold text-slate-800">CIN:</span>
+                                        <span className="font-mono text-xs md:text-sm">U25205RJ2023PTC085885</span>
+                                    </li>
+                                    <li className="flex flex-col sm:flex-row sm:justify-between text-slate-600 border-b border-slate-100 pb-2 last:border-0 last:pb-0">
+                                        <span className="font-semibold text-slate-800">Established:</span>
+                                        <span>Jan 16, 2023</span>
+                                    </li>
+                                    <li className="flex flex-col sm:flex-row sm:justify-between text-slate-600 border-b border-slate-100 pb-2 last:border-0 last:pb-0">
+                                        <span className="font-semibold text-slate-800">Directors:</span>
+                                        <span className="text-right">Roshan Kumar Chhajer,<br />Yash Choudhary, Vijeta Choudhary</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-6 pt-2">
                                 <div className="flex flex-col">
-                                    <span className="text-3xl font-bold text-primary">2023</span>
-                                    <span className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Established</span>
+                                    <span className="text-3xl font-bold text-primary">₹5-25 Cr</span>
+                                    <span className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Annual Turnover</span>
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-3xl font-bold text-primary"></span>
+                                    <span className="text-3xl font-bold text-primary">Jaipur</span>
                                     <span className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Factory Location</span>
                                 </div>
                             </div>
@@ -119,7 +143,7 @@ export default function AboutPage() {
                         <FeatureCard
                             icon={<Factory className="w-10 h-10 text-blue-400" />}
                             title="Advanced Manufacturing"
-                            desc="Located in , our facility utilizes the latest extrusion machinery for consistent thickness and quality control."
+                            desc="Located in Bagru (Jaipur), our facility utilizes the latest extrusion machinery for consistent thickness and quality control."
                         />
                         <FeatureCard
                             icon={<Leaf className="w-10 h-10 text-green-400" />}

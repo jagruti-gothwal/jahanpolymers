@@ -83,6 +83,7 @@ export function Navbar() {
                                 <NavLink href="/">Home</NavLink>
                                 <NavLink href="/about">About Us</NavLink>
                                 <NavLink href="/products">Products</NavLink>
+                                <NavLink href="/projects">Projects</NavLink>
                                 <NavLink href="/contact">Contact</NavLink>
                                 <button
                                     onClick={() => setIsQuoteOpen(true)}
@@ -117,6 +118,7 @@ export function Navbar() {
                                     <MobileNavLink href="/" onClick={() => setIsOpen(false)}>Home</MobileNavLink>
                                     <MobileNavLink href="/about" onClick={() => setIsOpen(false)}>About Us</MobileNavLink>
                                     <MobileNavLink href="/products" onClick={() => setIsOpen(false)}>Products</MobileNavLink>
+                                    <MobileNavLink href="/projects" onClick={() => setIsOpen(false)}>Projects</MobileNavLink>
                                     <MobileNavLink href="/contact" onClick={() => setIsOpen(false)}>Contact</MobileNavLink>
                                     <button
                                         onClick={() => { setIsOpen(false); setIsQuoteOpen(true); }}
