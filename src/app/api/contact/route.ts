@@ -10,6 +10,7 @@ const isAuthenticated = (request: Request) => {
     // Simple password protection: "Bearer <YOUR_ADMIN_PASSWORD_FROM_ENV>"
     // If no env var set, default to a temporary 'admin123' (CHANGE THIS IN PROD)
     const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
+    console.log("SERVER ENV PASSWORD:", ADMIN_PASSWORD); // DEBUGGING: Check Vercel Logs
     return authHeader === `Bearer ${ADMIN_PASSWORD}`;
 };
 
