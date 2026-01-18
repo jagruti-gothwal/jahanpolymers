@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Award, Users, Globe, CheckCircle, Factory, ShieldCheck, Leaf } from "lucide-react";
 import { IndustriesServed } from "@/components/IndustriesServed";
+import { JahanVisitingCard } from "@/components/JahanVisitingCard";
 
 
 export default function AboutPage() {
@@ -128,6 +129,16 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Why Choose Us - Dark Section */}
+            <div className="py-12 bg-white flex justify-center items-center flex-col">
+                <div className="text-center mb-2">
+                    <span className="text-accent font-semibold tracking-wider text-sm uppercase">Connect With Us</span>
+                    <h2 className="text-3xl font-bold text-slate-900 mt-2">Digital Business Card</h2>
+                    <p className="text-slate-500 mt-2">Hover to interact with our card</p>
+                </div>
+                <JahanVisitingCard />
+            </div>
 
             {/* Why Choose Us - Dark Section */}
             <section className="py-24 bg-slate-900 text-white">
