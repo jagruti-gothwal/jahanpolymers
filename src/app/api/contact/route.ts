@@ -48,8 +48,10 @@ export async function POST(request: Request) {
                     name: data.name || (data.firstName ? `${data.firstName} ${data.lastName}` : 'Unknown'),
                     email: data.email,
                     phone: data.phone,
-                    project_type: data.project_type,
-                    message: data.requirements || data.message
+                    project_type: data.project_type || data.product_interest,
+                    message: data.requirements || data.message,
+                    company: data.company,
+                    quantity: data.quantity
                 });
                 console.log('Contact saved to database');
             } catch (dbError) {

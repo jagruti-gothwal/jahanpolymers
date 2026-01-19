@@ -11,6 +11,8 @@ interface Contact {
     phone: string;
     project_type: string;
     message: string;
+    company?: string;
+    quantity?: string;
     createdAt: string;
 }
 
@@ -52,7 +54,8 @@ export default function AdminPage() {
     const filteredLeads = leads.filter(lead =>
         lead.name?.toLowerCase().includes(search.toLowerCase()) ||
         lead.email?.toLowerCase().includes(search.toLowerCase()) ||
-        lead.phone?.includes(search)
+        lead.phone?.includes(search) ||
+        lead.company?.toLowerCase().includes(search.toLowerCase())
     );
 
     if (!isAuthenticated) {
@@ -126,7 +129,7 @@ export default function AdminPage() {
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                         <input
                             type="text"
-                            placeholder="Search by name, email or phone..."
+                            placeholder="Search by name, email, phone or company..."
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                             className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 shadow-sm focus:ring-2 focus:ring-accent outline-none"
@@ -147,11 +150,19 @@ export default function AdminPage() {
                             >
                                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
                                     <div className="flex-1">
-                                        <div className="flex items-center gap-3 mb-2">
+                                        <div className="flex items-center gap-3 mb-2 flex-wrap">
                                             <h3 className="font-bold text-lg text-slate-900">{lead.name}</h3>
+                                            {lead.company && (
+                                                <span className="text-sm text-slate-500 font-medium"> @ {lead.company}</span>
+                                            )}
                                             <span className="px-2 py-0.5 bg-blue-50 text-blue-600 border border-blue-100 text-xs rounded-full font-medium">
                                                 {lead.project_type || 'General'}
                                             </span>
+                                            {lead.quantity && (
+                                                <span className="px-2 py-0.5 bg-purple-50 text-purple-600 border border-purple-100 text-xs rounded-full font-medium">
+                                                    Qty: {lead.quantity}
+                                                </span>
+                                            )}
                                         </div>
                                         <p className="text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100 text-sm leading-relaxed mb-4">
                                             {lead.message}

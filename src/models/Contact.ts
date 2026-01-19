@@ -16,6 +16,12 @@ const ContactSchema = new mongoose.Schema({
     project_type: {
         type: String,
     },
+    company: {
+        type: String,
+    },
+    quantity: {
+        type: String,
+    },
     message: {
         type: String,
         required: [true, 'Please provide a message'],

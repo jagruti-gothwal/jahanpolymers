@@ -34,22 +34,17 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         setError(null);
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/Jahanpolimars88@gmail.com", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'application/json'
                 },
-                body: JSON.stringify({
-                    ...formData,
-                    _subject: "New Quote Request from Website!",
-                    _template: "table"
-                })
+                body: JSON.stringify(formData)
             });
 
             const result = await response.json();
 
-            if (result.success === "true" || response.ok) {
+            if (result.success) {
                 setIsSubmitted(true);
             } else {
                 setError("Something went wrong. Please try again.");
