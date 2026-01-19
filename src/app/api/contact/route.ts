@@ -74,3 +74,40 @@ export async function POST(request: Request) {
         return NextResponse.json({ success: false, message: 'Failed to process request.' }, { status: 500 });
     }
 }
+
+export async function PUT(request: Request) {
+    try {
+        if (!isAuthenticated(request)) {
+            return NextResponse.json({ success: false, message: 'Unauthorized' }, { status: 401 });
+        }
+
+        const data = await request.json();
+        const { id, status } = data;
+
+        if (!id || !status) {
+            return NextResponse.json({ success: false, message: 'Missing ID or Status' }, { status: 400 });
+        }
+
+        await dbConnect();
+
+        const updateData: any = { status };
+        if (status === 'Contacted') {
+            updateData.lastContactedAt = new Date();
+        }
+
+        const updatedContact = await Contact.findByIdAndUpdate(
+            id,
+            updateData,
+            { new: true }
+        );
+
+        if (!updatedContact) {
+            return NextResponse.json({ success: false, message: 'Contact not found' }, { status: 404 });
+        }
+
+        return NextResponse.json({ success: true, data: updatedContact });
+    } catch (error) {
+        console.error('Update Error:', error);
+        return NextResponse.json({ success: false, message: 'Failed to update contact' }, { status: 500 });
+    }
+}

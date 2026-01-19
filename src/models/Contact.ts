@@ -26,6 +26,14 @@ const ContactSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a message'],
     },
+    status: {
+        type: String,
+        enum: ['New', 'Contacted', 'In Progress', 'Closed'],
+        default: 'New',
+    },
+    lastContactedAt: {
+        type: Date,
+    },
     createdAt: {
         type: Date,
         default: Date.now,
