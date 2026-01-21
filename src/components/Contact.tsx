@@ -11,6 +11,7 @@ export function Contact() {
         firstName: "",
         lastName: "",
         email: "",
+        phone: "",
         requirements: ""
     });
 
@@ -37,7 +38,7 @@ export function Contact() {
 
             if (result.success) {
                 setIsSubmitted(true);
-                setFormData({ firstName: "", lastName: "", email: "", requirements: "" });
+                setFormData({ firstName: "", lastName: "", email: "", phone: "", requirements: "" });
             } else {
                 setError("Something went wrong. Please try again or contact us directly.");
             }
@@ -150,6 +151,19 @@ export function Contact() {
                                         required
                                         className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                         placeholder="john@company.com"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        placeholder="+91 9999999999"
                                     />
                                 </div>
 

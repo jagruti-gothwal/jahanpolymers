@@ -1,16 +1,10 @@
-
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import dbConnect from '@/lib/db';
-import Contact from '@/models/Contact';
+import { prisma } from '@/lib/prisma';
 
 // Helper to check for auth
 const isAuthenticated = (request: Request) => {
     const authHeader = request.headers.get('authorization');
-    // Simple password protection: "Bearer <YOUR_ADMIN_PASSWORD_FROM_ENV>"
-    // If no env var set, default to a temporary 'admin123' (CHANGE THIS IN PROD)
     const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
-    console.log("SERVER ENV PASSWORD:", ADMIN_PASSWORD); // DEBUGGING: Check Vercel Logs
     return authHeader === `Bearer ${ADMIN_PASSWORD}`;
 };
 
@@ -20,18 +14,22 @@ export async function GET(request: Request) {
             return NextResponse.json({ success: false, message: 'Unauthorized' }, { status: 401 });
         }
 
-        // Graceful fallback if no DB is configured
-        if (!process.env.MONGODB_URI) {
-            return NextResponse.json({ success: true, data: [] });
-        }
+        const contacts = await prisma.contact.findMany({
+            orderBy: {
+                createdAt: 'desc',
+            },
+        });
 
-        await dbConnect();
-        const contacts = await Contact.find({}).sort({ createdAt: -1 });
+        // Map id to _id for frontend compatibility
+        const mappedContacts = contacts.map(c => ({
+            ...c,
+            _id: c.id
+        }));
 
-        return NextResponse.json({ success: true, data: contacts });
+        return NextResponse.json({ success: true, data: mappedContacts });
     } catch (error) {
         console.error('Database Fetch Error:', error);
-        return NextResponse.json({ success: false, message: 'Failed to fetch contacts.' }, { status: 500 });
+        return NextResponse.json({ success: false, message: 'Failed to fetch contacts from MySQL.' }, { status: 500 });
     }
 }
 
@@ -39,35 +37,20 @@ export async function POST(request: Request) {
     try {
         const data = await request.json();
 
-        // 1. Save to Database (Optional)
-        // Only attempt to save if MONGODB_URI is provided
-        if (process.env.MONGODB_URI) {
-            try {
-                await dbConnect();
-                await Contact.create({
-                    name: data.name || (data.firstName ? `${data.firstName} ${data.lastName}` : 'Unknown'),
-                    email: data.email,
-                    phone: data.phone,
-                    project_type: data.project_type || data.product_interest,
-                    message: data.requirements || data.message,
-                    company: data.company,
-                    quantity: data.quantity
-                });
-                console.log('Contact saved to database');
-            } catch (dbError) {
-                console.error('Database Error:', dbError);
-                // We continue execution to send email even if DB fails
+        const newContact = await prisma.contact.create({
+            data: {
+                name: data.name || (data.firstName ? `${data.firstName} ${data.lastName}` : 'Unknown'),
+                email: data.email,
+                phone: data.phone,
+                project_type: data.project_type || data.product_interest,
+                message: data.requirements || data.message,
+                company: data.company,
+                quantity: data.quantity,
+                status: 'New'
             }
-        }
+        });
 
-        // 2. Send Email - DISABLED (User requested Admin Panel only)
-        /* 
-        if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) { ... }
-        const transporter = ...
-        await transporter.sendMail(mailOptions);
-        */
-
-        return NextResponse.json({ success: true, message: 'Message saved to Dashboard!' });
+        return NextResponse.json({ success: true, message: 'Message saved to Dashboard!', data: { ...newContact, _id: newContact.id } });
 
     } catch (error) {
         console.error('Request Error:', error);
@@ -82,30 +65,25 @@ export async function PUT(request: Request) {
         }
 
         const data = await request.json();
-        const { id, status } = data;
+        // Frontend sends _id or id, handle both
+        const id = data.id || data._id;
+        const { status } = data;
 
         if (!id || !status) {
             return NextResponse.json({ success: false, message: 'Missing ID or Status' }, { status: 400 });
         }
-
-        await dbConnect();
 
         const updateData: any = { status };
         if (status === 'Contacted') {
             updateData.lastContactedAt = new Date();
         }
 
-        const updatedContact = await Contact.findByIdAndUpdate(
-            id,
-            updateData,
-            { new: true }
-        );
+        const updatedContact = await prisma.contact.update({
+            where: { id },
+            data: updateData
+        });
 
-        if (!updatedContact) {
-            return NextResponse.json({ success: false, message: 'Contact not found' }, { status: 404 });
-        }
-
-        return NextResponse.json({ success: true, data: updatedContact });
+        return NextResponse.json({ success: true, data: { ...updatedContact, _id: updatedContact.id } });
     } catch (error) {
         console.error('Update Error:', error);
         return NextResponse.json({ success: false, message: 'Failed to update contact' }, { status: 500 });
